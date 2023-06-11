@@ -24,7 +24,7 @@ $(call inherit-product, vendor/banana/config/common.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
-BANANA_BUILD_TYPE := CORE
+# BANANA_BUILD_TYPE := CORE
 TARGET_ENABLE_BLUR := false
 
 TARGET_INCLUDE_STOCK_ARCORE := true
