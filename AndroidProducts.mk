@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_river.mk
+    $(LOCAL_DIR)/banana_river.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_river-eng \
-    derp_river-user \
-    derp_river-userdebug
+    banana_river-eng \
+    banana_river-user \
+    banana_river-userdebug
