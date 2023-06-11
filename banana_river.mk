@@ -19,13 +19,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common derp stuff
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common banana stuff
+$(call inherit-product, vendor/banana/config/common.mk)
 
-DERP_BUILDTYPE := Official
-USE_LEGACY_BOOTANIMATION := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+BANANA_BUILD_TYPE := CORE
+TARGET_ENABLE_BLUR := true
+
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_EXCLUDE_MATLOG := true
+TARGER_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_BLUR := true
+
+WITH_GAPPS := true
+BUILD_CORE_GAPPS := true
+BUILD_CORE_GAPPS_EXTRA := true
 
 # Inherit from river device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -33,7 +46,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := river
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := derp_river
+PRODUCT_NAME := banana_river
 PRODUCT_MODEL := moto g(7)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
